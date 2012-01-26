@@ -1,0 +1,66 @@
+{
+  "id": "cloud-vps",
+  "url": "http://www.virtualmaster.cz/services/cloud-vps",
+  "name": {
+    "en": "Cloud VPS",
+    "cs": "Cloud VPS"
+  },
+  "period": "hour",
+  "attributes":  [
+    {
+      "id": "ram",
+      "name": {
+        "cs": "Pamet",
+        "en": "Ram"
+      },
+      "type": "range",
+      "min": 512,
+      "max": 7168,
+      "step": 512,
+      "unit": "MB",
+      "accounting": {
+        "type": "linear",
+        "price": 0.5
+      }
+    },
+    {
+      "id": "cores",
+      "name": {
+        "cs": "Pocet jader",
+        "en": "Cores count"
+      },
+      "type": "range",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "Cores",
+      "accounting": {
+        "type": "linear",
+        "price": 2000
+      }
+    },
+    {
+      "id": "fault-tolerant",
+      "name": {
+        "cs": "Fault tolerant",
+        "en": "Fault tolerant"
+      },
+      "url": "http://www.virtualmaster.cz/services/cloud-vps/fault-tolerant",
+      "desc": "descritption",
+      "type": "boolean",
+      "accounting": {
+        "type": "formula",
+        "formulas": [
+          {
+            "attribute": "ram",
+            "formula": "price_of_ram * 10"
+          },
+          {
+            "attribute": "cores",
+            "formula": "value_of_ram * 10"
+          }
+        ]
+      }
+    }
+  ]
+} 

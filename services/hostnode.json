@@ -1,0 +1,35 @@
+{
+  "id": "dedicated-server",
+  "url": "http://www.virtualmaster.cz/services/dedicated-server",
+  "icon": "http://www.virtualmaster.cz/icons/dedicated-server.png",
+  "name": {
+    "en": "Dedikovany server",
+    "cs": "Dedicated server"
+  },
+  "period": "month",
+  "attributes": [
+    {
+      "id": "type",
+      "name": {
+        "cs": "Typ",
+        "en": "Type"
+      },
+      "type": "options",
+      "options": [
+        {
+          "id": "cisco-light",
+          "name": {
+              "en": "Cisco UCS R200 - 1x CPU E666 2,6Ghz, 2x 1GB SATA",
+              "cs": "Cisco UCS R200 - 1x CPU E666 2,6Ghz, 2x 1GB SATA"
+          },
+          "url": "http://www.virtualmaster/services/dedicated-server/cisco-1",
+          "image": "http://www.virtualmaster/images/services/dedicated-server/cisco-1.png",
+          "price": 1000
+        }
+      ],
+      "accounting": {
+        "type": "static"
+      }
+    }
+  ]
+}

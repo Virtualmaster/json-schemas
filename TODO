@@ -1,0 +1,11 @@
+TODO
+ - localese to descriptions
+ - DRY locales in descriptions and names
+ - DOC formula examples for factor
+   * if number is given it multiplies attribute
+   * sum of formula results in array
+   * value_of_attribute
+   * price_of_attribute
+ - DRY accountings (options, attributes itselfs)
+ - valiadator for combimation of attribute type and accointing tyes
+ - attribute formula javascript validation

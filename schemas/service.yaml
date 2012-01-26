@@ -1,0 +1,121 @@
+type: map
+mapping: 
+  "id":
+    type: str
+    required: true
+
+  "name":
+    type: map
+    mapping:
+      "cs":
+        type: str
+      "en":
+        type: str  
+
+  "desc":
+    type: str
+
+  "url":
+    type: str
+
+  "icon":
+    type: str
+
+  "period":
+    type: str
+    required: true
+    enum: ["one-time", "second", "minute", "hour", "day", "week", "month", "year"]
+  
+  "attributes":
+    type: seq
+    required: true
+    sequence:
+      - type: map 
+        mapping:
+          "id":
+            type: str
+            required: true
+
+          "type":
+            type: str
+            required: true
+            enum: ["range", "count", "boolean", "options"]
+          
+          "options":
+            type: seq
+            sequence:
+              -
+                type: map
+                mapping:
+                  "id":
+                    type: str
+                    required: true
+                  "name":
+                    type: map
+                    required : true
+                    mapping:
+                      "cs":
+                        type: str
+                      "en":
+                        type: str  
+                  "url":
+                    type: str
+                  "image":
+                    type: str
+                  "desc":
+                    type: str
+                  "price":
+                    type: number
+                    required: true
+                    
+          "name":
+            type: map
+            required: true
+            mapping:
+              "cs":
+                type: str
+              "en":
+                type: str  
+
+          "url":
+            type: str
+
+          "desc":
+            type: str
+            
+          "min":
+            type: number
+
+          "max":
+            type: number
+
+          "step":
+            type: number
+
+          "unit":
+            type: str
+
+          "accounting":
+            required: true
+            type: map
+            mapping:
+              "type":
+                type: str
+                enum: ["linear", "formula", "static"]
+                required: true
+              "formulas":
+                type: seq
+                sequence:
+                  - type: map
+                    mapping:
+                      "attribute":
+                        type: str
+                        required: true
+                      "formula":
+                        type: text
+                        required: true
+
+              "price":
+                type: number
+              
+               

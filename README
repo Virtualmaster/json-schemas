@@ -1,0 +1,9 @@
+# JSON service definitons and validator
+
+## instalation
+bundle install
+
+## validation
+bundle exec kwalify -m schemas/service.yaml
+bundle exec kwalify -lf schemas/service.yaml services/*
+

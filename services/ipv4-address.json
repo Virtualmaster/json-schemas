@@ -1,0 +1,28 @@
+{ 
+  "id": "ipv4-address",
+  "url": "http://www.virtualmaster.cz/services/ipv4-address",
+  "icon": "http://www.virtualmaster.cz/icons/ipv4.png",
+  "name": {
+      "en": "IPv4 address",
+      "cs": "IPv4 adresa"
+  },
+  "desc": "IPv4 adresa",
+  "period": "hour",
+  "attributes": [
+    {
+      "id": "count",
+      "name": {
+        "cs": "Pocet",
+        "en": "Count"
+      },
+      "type": "range",
+      "min": 1,
+      "max": 253,
+      "step": 1,
+      "accounting": {
+        "type": "linear",
+        "price": 60
+      }
+    }
+  ]
+}

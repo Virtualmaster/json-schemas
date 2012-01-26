@@ -1,0 +1,64 @@
+  {
+    "id": "bulk-storage-1",
+    "url": "http://www.virtualmaster.cz/services/bulk-storage",
+    "name": {
+      "en": "Bulk storage",
+      "cs": "Hromadne uloziste"
+    },
+    period: "hour",
+    attributes:  [
+      {
+        "id": "size",
+        "name": {
+          "cs": "Velikost",
+          "en": "Size"
+        },
+        "type": "range",
+        "min": 1,
+        "max": 500,
+        "step": 1,
+        "unit": "GB",
+        "accounting": {
+          "type": "linear",
+          "price": 1.2
+        }
+      },
+      {
+        "id": "backup",
+        "name": {
+          "cs": "Denni zalohovani",
+          "en": "Daily backup"
+        },
+        "type": "boolean",
+        "accounting": { 
+          "type": "formula",
+          "formulas": [
+            {
+              "attribute": "size",
+              "formula": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "cardinality",
+        "name": {
+          "cs": "Kardinalita",
+          "en": "Cardinality"
+        },
+        "type": "range",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "accounting": {
+          "type": "formula",
+          "formulas": [
+            {
+              "attribute": "size",
+              "formula": 1.2
+            }
+          ] 
+        }
+      }
+    ] 
+  }
