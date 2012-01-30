@@ -39,7 +39,7 @@ mapping:
           "type":
             type: str
             required: true
-            enum: ["range", "count", "boolean", "options"]
+            enum: ["range", "number", "boolean", "options"]
           
           "options":
             type: seq
@@ -64,10 +64,16 @@ mapping:
                     type: str
                   "desc":
                     type: str
-                  "price":
-                    type: number
+                  "accounting":
+                    type: map
                     required: true
-                    
+                    mapping:
+                      "price":
+                        type: number
+                      "type":
+                        type: str
+                        enum: ["static"]  
+
           "name":
             type: map
             required: true
@@ -101,7 +107,7 @@ mapping:
             mapping:
               "type":
                 type: str
-                enum: ["linear", "formula", "static"]
+                enum: ["linear", "formula", "static", "options"]
                 required: true
               "formulas":
                 type: seq

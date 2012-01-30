@@ -5,10 +5,7 @@
 - install ruby
 - install rubygems
 - install gem bundler
-
-
-bundle install
-
+- bundle install
 
 ## validation of example services
 bundle exec kwalify -m schemas/service.yaml

@@ -24,11 +24,14 @@
           },
           "url": "http://www.virtualmaster/services/dedicated-server/cisco-1",
           "image": "http://www.virtualmaster/images/services/dedicated-server/cisco-1.png",
-          "price": 1000
+          "accounting": {
+            "type": "static",
+            "price": 100
+          }
         }
       ],
       "accounting": {
-        "type": "static"
+        "type": "options"
       }
     }
   ]
