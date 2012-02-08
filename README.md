@@ -8,8 +8,10 @@
 - bundle install
 
 ## validation of example services
-bundle exec kwalify -m schemas/service.yaml
-bundle exec kwalify -lf schemas/service.yaml services.example/*
+
+    bundle exec kwalify -m schemas/service.yaml
+    bundle exec kwalify -lf schemas/service.yaml services.example/*
 
 ## validation of real services
-bundle exec kwalify -lf schemas/service.yaml services/*
+
+    bundle exec kwalify -lf schemas/service.yaml services/*
