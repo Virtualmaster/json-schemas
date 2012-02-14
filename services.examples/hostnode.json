@@ -7,6 +7,7 @@
     "cs": "Dedicated server"
   },
   "period": "month",
+  "currency": "CZK",
   "attributes": [
     {
       "id": "type",

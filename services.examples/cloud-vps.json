@@ -6,6 +6,8 @@
     "cs": "Cloud VPS"
   },
   "period": "hour",
+  "currency": "CZK",
+
   "attributes":  [
     {
       "id": "ram",
@@ -50,16 +52,10 @@
       "type": "boolean",
       "accounting": {
         "type": "formula",
-        "formulas": [
-          {
-            "attribute": "ram",
-            "formula": "price_of_ram * 10"
-          },
-          {
-            "attribute": "cores",
-            "formula": "value_of_ram * 10"
-          }
-        ]
+        "formula": {
+          "attributes": ["ram"],
+          "formula": "attr_ram_price * 10"
+        }
       }
     }
   ]

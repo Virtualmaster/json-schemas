@@ -8,6 +8,7 @@
   },
   "desc": "IPv4 adresa",
   "period": "hour",
+  "currency": "CZK",
   "attributes": [
     {
       "id": "count",

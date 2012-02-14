@@ -6,6 +6,7 @@
       "cs": "Hromadne uloziste"
     },
     period: "hour",
+    currency: "CZK",
     attributes:  [
       {
         "id": "size",
@@ -32,12 +33,11 @@
         "type": "boolean",
         "accounting": { 
           "type": "formula",
-          "formulas": [
+          "formula": 
             {
-              "attribute": "size",
+              "attributes": ["size"],
               "formula": 10
             }
-          ]
         }
       },
       {
@@ -52,12 +52,11 @@
         "step": 1,
         "accounting": {
           "type": "formula",
-          "formulas": [
+          "formula": 
             {
-              "attribute": "size",
+              "attributes": ["size"],
               "formula": 1.2
             }
-          ] 
         }
       }
     ] 

@@ -25,7 +25,9 @@ mapping:
     type: str
     required: true
     enum: ["one-time", "second", "minute", "hour", "day", "week", "month", "year"]
-  
+  "currency":
+    type: str
+    required: true
   "attributes":
     type: seq
     required: true
@@ -40,7 +42,7 @@ mapping:
             type: str
             required: true
             enum: ["range", "number", "boolean", "options"]
-          
+
           "options":
             type: seq
             sequence:
@@ -109,18 +111,17 @@ mapping:
                 type: str
                 enum: ["linear", "formula", "static", "options"]
                 required: true
-              "formulas":
-                type: seq
-                sequence:
-                  - type: map
-                    mapping:
-                      "attribute":
-                        type: str
-                        required: true
-                      "formula":
-                        type: text
-                        required: true
-
+              "formula":
+                  type: map
+                  mapping:
+                    "attributes":
+                      type: seq
+                      required: true
+                      sequence:
+                        - type: str
+                    "formula":
+                      type: text
+                      required: true
               "price":
                 type: number
               
