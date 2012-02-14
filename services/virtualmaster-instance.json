@@ -1,0 +1,68 @@
+{
+  "id": "cloud-vps",
+  "url": "http://www.virtualmaster.cz/cs/cloud-hosting-virtualni-servery",
+  "name": {
+    "en": "Cloud VPS - old",
+    "cs": "Cloud VPS - stare"
+  },
+  "period": "hour",
+  "currency": "CZK",
+  "attributes":  [
+    {
+      "id": "ram",
+      "name": {
+        "cs": "Pamet",
+        "en": "Ram"
+      },
+      "type": "range",
+      "min": 512,
+      "max": 7168,
+      "step": 1,
+      "unit": "MB",
+      "accounting": {
+        "type": "formula",
+        "formula": {
+          "attributes": ["ram"],
+          "formula": "Math.round( 0.6 * Math.pow( attr_ram_value, 0.96))"
+        }
+      }
+    },
+    {
+      "id": "storage",
+      "name": {
+        "cs": "Uloziste",
+        "en": "Storage"
+      },
+      "type": "range",
+      "min": 2,
+      "max": 1000,
+      "step": 1,
+      "unit": "GB",
+      "accounting": {
+        "type": "formula",
+        "formula": {
+          "attributes": ["storage"],
+          "formula": "Math.pow( attr_storage_value, 0.8) ) / 720) * 10000 ) /10000"
+        }
+      }
+    },
+    {
+      "id": "backup-and-high-cpu",
+      "name": {
+        "cs": "Zalohovani a vysoky vykon",
+        "en": "Backup and high cpu"
+      },
+      "type": "boolean",
+      "accounting": {
+        "type": "formula",
+        "formula":  {
+            attributes: [
+              "ram",
+              "storage"
+            ],
+            "formula": "(attr_ram_price + attr_storage_price)"
+        }
+      }
+    }
+  ]
+} 
