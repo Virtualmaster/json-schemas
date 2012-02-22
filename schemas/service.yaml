@@ -90,7 +90,10 @@ mapping:
 
           "desc":
             type: str
-            
+          
+          "default":
+            type: number
+              
           "min":
             type: number
 

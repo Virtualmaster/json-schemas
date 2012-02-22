@@ -17,6 +17,7 @@
         "en": "Count"
       },
       "type": "range",
+      "default": 0,
       "min": 1,
       "max": 253,
       "step": 1,

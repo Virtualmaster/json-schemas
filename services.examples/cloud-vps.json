@@ -16,6 +16,7 @@
         "en": "Ram"
       },
       "type": "range",
+      "default": 0,
       "min": 512,
       "max": 7168,
       "step": 512,
