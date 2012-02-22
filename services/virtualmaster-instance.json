@@ -29,27 +29,6 @@
       }
     },
     {
-      "id": "cardinality",
-      "name": {
-        "cs": "Kardinalita dat",
-        "en": "Data cardinality"
-      },
-      "type": "range",
-      "default": 1,
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "unit": "copies",
-      "accounting": {
-        "type": "formula",
-        "formula": {
-          "attributes": ["ram"],
-          "formula": "Math.round( 0.6 * Math.pow( attr_ram_value, 0.96))"
-        }
-      }
-    },
-
-    {
       "id": "storage",
       "name": {
         "cs": "Uloziste",
