@@ -48,12 +48,32 @@
       }
     },
     {
-      "id": "backup-and-high-cpu",
+      "id": "backup",
       "name": {
-        "cs": "Zalohovani a vysoky vykon",
-        "en": "Backup and high cpu"
+        "cs": "Incrementalni zalohovani",
+        "en": "Incremental backup"
       },
       "type": "boolean",
+      "default": true,
+      "accounting": {
+        "type": "formula",
+        "formula":  {
+            "attributes": [
+              "ram",
+              "storage"
+            ],
+            "formula": "(attr_ram_price + attr_storage_price)"
+        }
+      }
+    },
+    {
+      "id": "high-cpu",
+      "name": {
+        "cs": "Vysoky vykon CPU",
+        "en": "High CPU"
+      },
+      "type": "boolean",
+      "default": false,
       "accounting": {
         "type": "formula",
         "formula":  {
